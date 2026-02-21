@@ -1,0 +1,6 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- صلاحيات بيئة Profile (قياس الأداء) — لا تُضمَّن في Release -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+</manifest>

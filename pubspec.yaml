@@ -1,0 +1,120 @@
+name: gitty
+description: "Gitty - Advanced Mobile Git Client with full Git Plumbing Engine"
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  # Dart 3.7.x (يأتي مع Flutter 3.29.x)
+  # يدعم: sealed classes, records, patterns, switch expressions
+  sdk: '>=3.7.0 <4.0.0'
+  flutter: '>=3.29.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ── State Management ─────────────────────────────────────────────────────────
+  flutter_riverpod: 3.1.0           # إصدار متوافق مع Flutter 3.29.2
+
+  # ── Networking ───────────────────────────────────────────────────────────────
+  dio: ^5.4.3+1
+  retrofit: ^4.1.0
+
+  # ── Security & Storage ───────────────────────────────────────────────────────
+  flutter_secure_storage: ^10.0.0   # يتطلب Dart >=3.5 ✓
+  encrypt: ^5.0.3
+  pointycastle: ^3.7.4
+
+  # ── Firebase ─────────────────────────────────────────────────────────────────
+  firebase_core: ^4.4.0             # يتطلب Dart >=3.5 ✓
+  firebase_remote_config: ^6.1.4    # يتطلب Dart >=3.5 ✓
+
+  # ── File & Path ───────────────────────────────────────────────────────────────
+  path_provider: ^2.1.4
+  path: ^1.9.0
+  file_picker: ^10.3.10             # يتطلب Dart >=3.5 ✓
+  mime: ^2.0.0                      # يتطلب Dart >=3.5 ✓
+
+  # ── Encoding / Git Plumbing ───────────────────────────────────────────────────
+  convert: ^3.1.1
+  crypto: ^3.0.3
+  archive: ^4.0.9                   # يتطلب Dart >=3.5 ✓
+
+  # ── Serialization ─────────────────────────────────────────────────────────────
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.9.0
+
+  # ── Routing ───────────────────────────────────────────────────────────────────
+  go_router: ^14.2.7
+  url_launcher: ^6.3.1
+
+  # ── UI & Design ───────────────────────────────────────────────────────────────
+  flutter_svg: ^2.0.10+1
+  cached_network_image: ^3.4.1
+  shimmer: ^3.0.0
+  lottie: ^3.1.2
+  animations: ^2.0.11
+  flex_color_scheme: ^8.2.0         # يتطلب Dart >=3.6 ✓
+  google_fonts: ^6.1.0              # يتطلب Dart >=3.7 ✓
+
+  # ── Logging ───────────────────────────────────────────────────────────────────
+  logger: ^2.4.0
+  ansicolor: ^2.0.3
+  intl: ^0.20.2                     # يتطلب Dart >=3.5 ✓
+
+  # ── Connectivity ──────────────────────────────────────────────────────────────
+  connectivity_plus: ^6.1.0
+  retry: ^3.1.2
+
+  # ── Utilities ─────────────────────────────────────────────────────────────────
+  uuid: ^4.4.2
+  equatable: ^2.0.7
+  dartz: ^0.10.1
+  collection: ^1.18.0
+  package_info_plus: ^8.0.0
+  device_info_plus: ^10.1.0
+  share_plus: ^10.0.0               # يتطلب Dart >=3.5 ✓
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # ── Code Generation ───────────────────────────────────────────────────────────
+  build_runner: ^2.4.8
+  freezed: ^2.4.7
+  retrofit_generator: ^8.1.0
+  json_serializable: ^6.8.0
+
+  # ── Testing ───────────────────────────────────────────────────────────────────
+  mockito: ^5.4.4
+  mocktail: ^1.0.4
+  network_image_mock: ^2.1.1
+
+  # ── Linting ───────────────────────────────────────────────────────────────────
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/animations/
+    - assets/fonts/
+    - assets/certificates/
+
+  fonts:
+    - family: JetBrainsMono
+      fonts:
+        - asset: assets/fonts/JetBrainsMono-Regular.ttf
+        - asset: assets/fonts/JetBrainsMono-Bold.ttf
+          weight: 700
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700

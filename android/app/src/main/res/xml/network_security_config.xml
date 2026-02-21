@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+
+    <!-- ── GitHub API — SSL Pinning ──────────────────────────── -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">api.github.com</domain>
+        <domain includeSubdomains="true">github.com</domain>
+        <domain includeSubdomains="true">raw.githubusercontent.com</domain>
+        <pin-set expiration="2027-01-01">
+            <!-- GitHub Primary — SHA-256 DigiCert TLS RSA4096 Root G5 -->
+            <pin digest="SHA-256">WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18=</pin>
+            <!-- Backup pin — DigiCert Global Root CA -->
+            <pin digest="SHA-256">r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E=</pin>
+        </pin-set>
+        <trustkit-config enforcePinning="false" />
+    </domain-config>
+
+    <!-- ── Firebase ──────────────────────────────────────────── -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">firebaseremoteconfig.googleapis.com</domain>
+        <domain includeSubdomains="true">firebase.googleapis.com</domain>
+    </domain-config>
+
+    <!-- ── الإعداد الافتراضي — يمنع HTTP لكل النطاقات ───────── -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+</network-security-config>

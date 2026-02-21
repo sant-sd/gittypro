@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- مجلدات التطبيق الداخلية -->
+    <files-path name="internal_files" path="." />
+    <cache-path name="internal_cache" path="." />
+
+    <!-- التخزين الخارجي — مطلوب لـ file_picker -->
+    <external-files-path name="external_files" path="." />
+    <external-cache-path name="external_cache" path="." />
+
+    <!-- التخزين الخارجي المشترك — لرفع الملفات من Downloads/Documents -->
+    <external-path name="external_storage" path="." />
+</paths>
