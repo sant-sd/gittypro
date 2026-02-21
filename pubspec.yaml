@@ -4,8 +4,6 @@ publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  # Dart 3.7.x (يأتي مع Flutter 3.29.x)
-  # يدعم: sealed classes, records, patterns, switch expressions
   sdk: '>=3.7.0 <4.0.0'
   flutter: '>=3.29.0'
 
@@ -14,31 +12,31 @@ dependencies:
     sdk: flutter
 
   # ── State Management ─────────────────────────────────────────────────────────
-  flutter_riverpod: 3.1.0           # إصدار متوافق مع Flutter 3.29.2
+  flutter_riverpod: 3.1.0           
 
   # ── Networking ───────────────────────────────────────────────────────────────
   dio: ^5.4.3+1
   retrofit: ^4.1.0
 
   # ── Security & Storage ───────────────────────────────────────────────────────
-  flutter_secure_storage: ^10.0.0   # يتطلب Dart >=3.5 ✓
+  flutter_secure_storage: ^10.0.0   
   encrypt: ^5.0.3
   pointycastle: ^3.7.4
 
   # ── Firebase ─────────────────────────────────────────────────────────────────
-  firebase_core: ^4.4.0             # يتطلب Dart >=3.5 ✓
-  firebase_remote_config: ^6.1.4    # يتطلب Dart >=3.5 ✓
+  firebase_core: ^4.4.0             
+  firebase_remote_config: ^6.1.4    
 
   # ── File & Path ───────────────────────────────────────────────────────────────
   path_provider: ^2.1.4
   path: ^1.9.0
-  file_picker: ^10.3.10             # يتطلب Dart >=3.5 ✓
-  mime: ^2.0.0                      # يتطلب Dart >=3.5 ✓
+  file_picker: ^10.3.10             
+  mime: ^2.0.0                      
 
   # ── Encoding / Git Plumbing ───────────────────────────────────────────────────
   convert: ^3.1.1
   crypto: ^3.0.3
-  archive: ^4.0.9                   # يتطلب Dart >=3.5 ✓
+  archive: ^4.0.9                   
 
   # ── Serialization ─────────────────────────────────────────────────────────────
   freezed_annotation: ^2.4.1
@@ -54,13 +52,13 @@ dependencies:
   shimmer: ^3.0.0
   lottie: ^3.1.2
   animations: ^2.0.11
-  flex_color_scheme: ^8.2.0         # يتطلب Dart >=3.6 ✓
-  google_fonts: ^6.1.0              # يتطلب Dart >=3.7 ✓
+  flex_color_scheme: ^8.2.0         
+  google_fonts: ^6.1.0              
 
   # ── Logging ───────────────────────────────────────────────────────────────────
   logger: ^2.4.0
   ansicolor: ^2.0.3
-  intl: ^0.20.2                     # يتطلب Dart >=3.5 ✓
+  intl: ^0.20.2                     
 
   # ── Connectivity ──────────────────────────────────────────────────────────────
   connectivity_plus: ^6.1.0
@@ -73,7 +71,7 @@ dependencies:
   collection: ^1.18.0
   package_info_plus: ^8.0.0
   device_info_plus: ^10.1.0
-  share_plus: ^10.0.0               # يتطلب Dart >=3.5 ✓
+  share_plus: ^10.0.0               
 
 dev_dependencies:
   flutter_test:
@@ -92,6 +90,10 @@ dev_dependencies:
 
   # ── Linting ───────────────────────────────────────────────────────────────────
   flutter_lints: ^5.0.0
+
+# ── Dependency Overrides (حل تعارض الإصدارات) ──────────────────────────────────
+dependency_overrides:
+  analyzer: ^6.4.1
 
 flutter:
   uses-material-design: true
